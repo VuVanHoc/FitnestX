@@ -1,4 +1,4 @@
-import CustomText from '../CustomText';
+import FitnestText from '../FitnestText';
 import {LogoTypeEnum} from '../../enums/LogoTypeEnum';
 import React from 'react';
 import {View} from 'react-native';
@@ -10,11 +10,11 @@ interface LogoProps {
 export default function Logo({type}: LogoProps) {
   return (
     <View style={styles.container}>
-      <CustomText style={styles.fitnest}>Fitnest</CustomText>
-      <CustomText
+      <FitnestText style={styles.fitnest}>Fitnest</FitnestText>
+      <FitnestText
         style={type === LogoTypeEnum.Dark ? styles.dark : styles.white}>
         X
-      </CustomText>
+      </FitnestText>
     </View>
   );
 }

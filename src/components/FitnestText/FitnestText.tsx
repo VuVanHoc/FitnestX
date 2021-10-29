@@ -2,11 +2,11 @@ import React from 'react';
 import {Text} from 'react-native';
 import styles from './styles';
 
-interface CustomTextProps {
+interface FitnestTextProps {
   children: string;
   style?: any;
 }
-export default function CustomText(props: CustomTextProps) {
+export default function FitnestText(props: FitnestTextProps) {
   return (
     <Text style={styles.text} {...props}>
       {props.children}

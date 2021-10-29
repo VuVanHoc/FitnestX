@@ -1,8 +1,13 @@
 import React from 'react';
-import GetStarted from './src/screens/Onboarding/GetStarted';
+import {NavigationContainer} from '@react-navigation/native';
+import OnboardingRouter from 'src/routers/OnboardingRouter';
 
 const App = () => {
-  return <GetStarted />;
+  return (
+    <NavigationContainer>
+      <OnboardingRouter />
+    </NavigationContainer>
+  );
 };
 
 export default App;

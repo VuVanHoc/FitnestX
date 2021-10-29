@@ -29,6 +29,43 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: Colors.blue,
   },
+  containerWelcomeView: {
+    flex: 1,
+  },
+  imageWelcome: {
+    width: '100%',
+    height: '50%',
+    resizeMode: 'stretch',
+  },
+  bottomViewWelcome: {
+    paddingHorizontal: 30,
+    paddingTop: 64,
+    paddingBottom: 40,
+    justifyContent: 'space-between',
+    flex: 1,
+  },
+  title: {
+    fontWeight: '700',
+    fontSize: 24,
+    lineHeight: 36,
+    marginBottom: 15,
+  },
+  content: {
+    fontSize: 14,
+    color: Colors.gray1,
+    lineHeight: 21,
+    letterSpacing: 0.7,
+  },
+  nextStepWrapper: {
+    alignItems: 'flex-end',
+  },
+  buttonNextStep: {
+    width: 50,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 25,
+  },
 });
 
 export default styles;
