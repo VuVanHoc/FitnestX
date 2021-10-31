@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {Colors} from '../../styles/theme';
+import {Colors} from '../../../styles/theme';
 
 const styles = StyleSheet.create({
   container: {flexDirection: 'row', alignItems: 'center'},

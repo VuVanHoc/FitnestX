@@ -1,5 +1,5 @@
 import FitnestText from '../FitnestText';
-import {LogoTypeEnum} from '../../enums/LogoTypeEnum';
+import {LogoTypeEnum} from '../../../enums/LogoTypeEnum';
 import React from 'react';
 import {View} from 'react-native';
 import styles from './styles';

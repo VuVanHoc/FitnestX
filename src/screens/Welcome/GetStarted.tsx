@@ -3,8 +3,8 @@ import {TouchableOpacity, View} from 'react-native';
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import {Colors} from 'src/styles/theme';
-import Logo from 'src/components/Logo';
-import FitnestText from 'src/components/FitnestText';
+import Logo from 'src/components/common/Logo';
+import FitnestText from 'src/components/common/FitnestText';
 import {RouterNameEnum} from 'src/enums/RouterNameEnum';
 
 interface GetStartedProps {

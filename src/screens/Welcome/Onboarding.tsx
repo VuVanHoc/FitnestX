@@ -1,8 +1,8 @@
 import React from 'react';
-import {Image, TouchableOpacity, View} from 'react-native';
+import {TouchableOpacity, View, Animated} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import LightArrowRight2 from 'src/assets/icons/LightArrowRight2';
-import FitnestText from 'src/components/FitnestText';
+import FitnestText from 'src/components/common/FitnestText';
 import {Colors} from 'src/styles/theme';
 import styles from './styles';
 import {AnimatedCircularProgress} from 'react-native-circular-progress';
@@ -36,7 +36,15 @@ const contentsWelcomeScreen = [
 export default function Onboarding() {
   const [step, setStep] = React.useState(0);
 
-  const {image, title, content} = contentsWelcomeScreen[step];
+  const fadeAnimation = React.useRef(new Animated.Value(0)).current;
+
+  React.useEffect(() => {
+    Animated.timing(fadeAnimation, {
+      toValue: 1,
+      duration: 1000,
+      useNativeDriver: false,
+    }).start();
+  }, [fadeAnimation]);
 
   const onNextStep = React.useCallback(() => {
     if (step >= 3) {
@@ -44,9 +52,14 @@ export default function Onboarding() {
       setStep(step + 1);
     }
   }, [setStep, step]);
+
+  const {image, title, content} = contentsWelcomeScreen[step];
   return (
     <View style={styles.containerWelcomeView}>
-      <Image source={image} style={styles.imageWelcome} />
+      <Animated.Image
+        source={image}
+        style={{...styles.imageWelcome, opacity: fadeAnimation}}
+      />
       <View style={styles.bottomViewWelcome}>
         <View>
           <FitnestText style={styles.title}>{title}</FitnestText>
