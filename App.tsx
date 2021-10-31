@@ -1,11 +1,11 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import OnboardingRouter from 'src/routers/OnboardingRouter';
+import AuthRouter from 'src/routers/AuthRouter';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <OnboardingRouter />
+      <AuthRouter />
     </NavigationContainer>
   );
 };

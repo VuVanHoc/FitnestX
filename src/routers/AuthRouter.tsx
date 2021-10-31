@@ -6,7 +6,7 @@ import Onboarding from 'src/screens/Welcome/Onboarding';
 
 const Stack = createNativeStackNavigator();
 
-export default function OnboardingRouter() {
+export default function AuthRouter() {
   return (
     <Stack.Navigator>
       <Stack.Screen
